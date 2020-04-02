@@ -1,0 +1,2 @@
+# Charter
+Proposed COSE charter
