@@ -37,7 +37,7 @@ The COSE working group will deal with two types of documents going forward:
 
 The WG will evaluate, and potentially adopt, documents dealing with algorithms
 which would fit the criteria of being IETF consensus algorithms.
-Potential candidates would include those algorithms which have been evaluate by
+Potential candidates would include those algorithms which have been evaluated by
 the CFRG and algorithms which have gone through a public review and evaluation
 process such as was done for the NIST SHA-3 algorithms.
 Potential candidate would not include national standards based algorithms
