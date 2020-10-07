@@ -100,9 +100,13 @@ The WG currently has two deliverables:
 These algorithms must meet the requirements outlined above.
 
 2. A CBOR encoding of the compressed certificate profile defined in RFC 7925.
-It should be noted that this is not a new certificate architecture, rather it
-is a method of compressing current X.509 certificates that meet a specific profile
-into a smaller format.  The compression algorithm is loss-less so they can be
-expanded and normal X.509 certificate processing used.  This work will be based
-on draft-mattsson-cose-cbor-cert-compress and draft-raza-ace-cbor-certificates.
-It is expected these documents are to be combined into a single document.
+It is expected that the compression works with a large subset of RFC 7925 and
+takes into consideration any updates in draft-ietf-uta-tls13-iot-profile-00.
+The compression may also include other important IoT certificate profiles like
+IEEE 802.11AR.  It should be noted that this is not a new certificate
+architecture, rather it is a method of compressing current X.509 certificates
+that meet a specific profile into a smaller format.  The compression algorithm
+is loss-less so they can be expanded and normal X.509 certificate processing
+used.  This work will be based on draft-mattsson-cose-cbor-cert-compress.
+The working group will collaborate and coordinate with other IETF WGs such as
+TLS, UTA, LAKE to understand and validate the requirements and solution.
