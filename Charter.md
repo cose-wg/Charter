@@ -103,10 +103,9 @@ These algorithms must meet the requirements outlined above.
 It is expected that the compression works with a large subset of RFC 7925 and
 takes into consideration any updates in draft-ietf-uta-tls13-iot-profile-00.
 The compression may also include other important IoT certificate profiles like
-IEEE 802.1AR.  It should be noted that this is not a new certificate
-architecture, rather it is a method of compressing current X.509 certificates
-that meet a specific profile into a smaller format.  The compression algorithm
-is loss-less so they can be expanded and normal X.509 certificate processing
-used.  This work will be based on draft-mattsson-cose-cbor-cert-compress.
+IEEE 802.1AR.
+The main objective is to define a method of compressing current X.509 certificates that meet a specific profile into a smaller format. This compression algorithm is loss-less so they can be expanded and normal X.509 certificate processing used.
+Another objective is to explore the possibility to parse and verify the compressed X.509 encoding directly on the target device. This removes the need for compression, decompression, and DER parsing, with associated overhead and code, which is relevant for embedded implementations.
+This work will be based on draft-mattsson-cose-cbor-cert-compress.
 The working group will collaborate and coordinate with other IETF WGs such as
 TLS, UTA, LAKE to understand and validate the requirements and solution.
