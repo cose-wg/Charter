@@ -103,7 +103,7 @@ These algorithms must meet the requirements outlined above.
 It is expected that the compression works with a large subset of RFC 7925 and
 takes into consideration any updates in draft-ietf-uta-tls13-iot-profile-00.
 The compression may also include other important IoT certificate profiles like
-IEEE 802.11AR.  It should be noted that this is not a new certificate
+IEEE 802.1AR.  It should be noted that this is not a new certificate
 architecture, rather it is a method of compressing current X.509 certificates
 that meet a specific profile into a smaller format.  The compression algorithm
 is loss-less so they can be expanded and normal X.509 certificate processing
