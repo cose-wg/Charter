@@ -105,7 +105,16 @@ takes into consideration any updates in draft-ietf-uta-tls13-iot-profile-00.
 The compression may also include other important IoT certificate profiles like
 IEEE 802.1AR.
 The main objective is to define a method of compressing current X.509 certificates that meet a specific profile into a smaller format. This compression algorithm is loss-less so they can be expanded and normal X.509 certificate processing used.
-Another objective is to explore the possibility to parse and verify the compressed X.509 encoding directly on the target device. This removes the need for compression, decompression, and DER parsing, with associated overhead and code, which is relevant for embedded implementations.
+The data structures used to encode such compressed X.509 certificates are
+expected to produce a compact encoding for certificate information, and are
+not necessarily tied specifically to X.509 certificates.  Accordingly, a
+secondary objective is to reuse these data structures to produce a native
+COSE certificate encoding; such a structure is relevant in situations
+where DER parsing and the compression/decompression machinery to convert
+between CBOR and DER encodings are unnecessary overhead, such as embedded
+implementations.  The possibility of a joint certificate artifact, conveyed in
+CBOR encoding but including signatures over both the CBOR and DER encodings,
+may be explored.
 This work will be based on draft-mattsson-cose-cbor-cert-compress.
 The working group will collaborate and coordinate with other IETF WGs such as
 TLS, UTA, LAKE to understand and validate the requirements and solution.
