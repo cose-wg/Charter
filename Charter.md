@@ -63,7 +63,7 @@ where DER parsing and the compression/decompression machinery to convert
 between CBOR and DER encodings are unnecessary overhead, such as embedded
 implementations.  The possibility of a joint certificate artifact, conveyed in
 CBOR encoding but including signatures over both the CBOR and DER encodings,
-may be explored.
+may be explored.  CBOR encoding of other X.509 certificate related data structures may also be specified to support relevant functions such as revocation: Certificate Revocation List (RFC 5280) or OSCP Request/Response (RFC 6960); or certificate enrolment: Certificate Signing Request (RFC 2986).
 This work will be based on draft-mattsson-cose-cbor-cert-compress.
 The working group will collaborate and coordinate with other IETF WGs such as
 TLS, UTA, LAKE to understand and validate the requirements and solution.
