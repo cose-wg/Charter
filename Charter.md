@@ -59,7 +59,7 @@ The data structures used for such encoding of X.509 certificates are
 expected to produce a compact encoding for certificate information, and are
 not necessarily tied specifically to X.509 certificates.  Accordingly, a
 secondary objective is to reuse these data structures to produce a natively signed CBOR certificate encoding; such a structure is relevant in situations
-where DER parsing and the re-encoding machinery to convert
+where DER parsing and the machinery to convert
 between CBOR and DER encodings are unnecessary overhead, such as embedded
 implementations.  The possibility of a joint certificate artifact, conveyed in
 CBOR encoding but including signatures over both the CBOR and DER encodings,
