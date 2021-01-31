@@ -48,18 +48,18 @@ The WG currently has two deliverables:
 These algorithms must meet the requirements outlined above.
 
 2. A CBOR encoding of the certificate profile defined in RFC 5280.
-It is expected that the compression works with RFC 7925 and takes into consideration any updates in draft-ietf-uta-tls13-iot-profile-00.
-The compression may also include other important IoT certificate profiles like
+It is expected that the encoding works with RFC 7925 and takes into consideration any updates in draft-ietf-uta-tls13-iot-profile-00.
+The encoding may also include other important IoT certificate profiles like
 IEEE 802.1AR.
-The main objective is to define a method of compressing current X.509
+The main objective is to define a method of encoding current X.509
 certificates that meet a specific profile into a smaller format. This
-compression algorithm is loss-less so they can be expanded and normal X.509
+encoding is invertible so they can be expanded and normal X.509
 certificate processing used.
-The data structures used to encode such compressed X.509 certificates are
+The data structures used for such encoding of X.509 certificates are
 expected to produce a compact encoding for certificate information, and are
 not necessarily tied specifically to X.509 certificates.  Accordingly, a
 secondary objective is to reuse these data structures to produce a natively signed CBOR certificate encoding; such a structure is relevant in situations
-where DER parsing and the compression/decompression machinery to convert
+where DER parsing and the machinery to convert
 between CBOR and DER encodings are unnecessary overhead, such as embedded
 implementations.  The possibility of a joint certificate artifact, conveyed in
 CBOR encoding but including signatures over both the CBOR and DER encodings,
